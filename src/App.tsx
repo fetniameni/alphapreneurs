@@ -10,6 +10,8 @@ import Formations from "./pages/Formations";
 import Utilisateurs from "./pages/Utilisateurs";
 import APropos from "./pages/APropos";
 import Contact from "./pages/Contact";
+import Connexion from "./pages/Connexion";
+import Inscription from "./pages/Inscription";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/utilisateurs" element={<Utilisateurs />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/connexion" element={<Connexion />} />
+          <Route path="/inscription" element={<Inscription />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

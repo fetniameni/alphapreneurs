@@ -29,8 +29,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A</span>
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/b2da59bd-3d13-4b57-9c77-a9d73697807f.png" 
+                alt="Alphapreneurs Logo" 
+                className="w-8 h-8"
+              />
             </div>
             <span className="text-xl font-bold gradient-text">Alphapreneurs</span>
           </Link>
@@ -50,10 +54,19 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-primary hover:bg-primary/90">
-              <User className="w-4 h-4 mr-2" />
-              Connexion
-            </Button>
+            <div className="flex items-center space-x-2">
+              <Link to="/connexion">
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                  Connexion
+                </Button>
+              </Link>
+              <Link to="/inscription">
+                <Button className="bg-primary hover:bg-primary/90">
+                  <User className="w-4 h-4 mr-2" />
+                  Inscription
+                </Button>
+              </Link>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -85,11 +98,18 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-2">
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  <User className="w-4 h-4 mr-2" />
-                  Connexion
-                </Button>
+              <div className="pt-2 space-y-2">
+                <Link to="/connexion" className="block">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                    Connexion
+                  </Button>
+                </Link>
+                <Link to="/inscription" className="block">
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    <User className="w-4 h-4 mr-2" />
+                    Inscription
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
