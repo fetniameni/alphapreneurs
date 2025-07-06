@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -10,8 +9,12 @@ const Footer = () => {
           {/* Logo et description */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="w-8 h-8 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/b2da59bd-3d13-4b57-9c77-a9d73697807f.png" 
+                  alt="Alphapreneurs Logo" 
+                  className="w-8 h-8"
+                />
               </div>
               <span className="text-xl font-bold">Alphapreneurs</span>
             </Link>
