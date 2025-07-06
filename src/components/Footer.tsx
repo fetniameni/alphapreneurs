@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -23,16 +24,16 @@ const Footer = () => {
               centralisant ressources et opportunités pour un écosystème collaboratif.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -44,6 +45,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/opportunites" className="text-gray-300 hover:text-primary transition-colors">Opportunités</Link></li>
               <li><Link to="/formations" className="text-gray-300 hover:text-primary transition-colors">Formations</Link></li>
+              <li><Link to="/galerie" className="text-gray-300 hover:text-primary transition-colors">Galerie</Link></li>
               <li><Link to="/utilisateurs" className="text-gray-300 hover:text-primary transition-colors">Utilisateurs</Link></li>
               <li><Link to="/a-propos" className="text-gray-300 hover:text-primary transition-colors">À propos</Link></li>
             </ul>
@@ -66,11 +68,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">contact@alphapreneurs.tn</span>
+                <a href="mailto:contact@alphapreneurs.tn" className="text-sm hover:text-primary transition-colors">
+                  contact@alphapreneurs.tn
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+216 XX XXX XXX</span>
+                <a href="tel:+216XXXXXXX" className="text-sm hover:text-primary transition-colors">
+                  +216 XX XXX XXX
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4" />
@@ -85,12 +91,12 @@ const Footer = () => {
             © 2024 Alphapreneurs. Tous droits réservés.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
+            <Link to="/privacy" className="text-gray-400 hover:text-primary text-sm transition-colors">
               Politique de confidentialité
-            </a>
-            <a href="#" className="text-gray-400 hover:text-primary text-sm transition-colors">
+            </Link>
+            <Link to="/terms" className="text-gray-400 hover:text-primary text-sm transition-colors">
               Conditions d'utilisation
-            </a>
+            </Link>
           </div>
         </div>
       </div>

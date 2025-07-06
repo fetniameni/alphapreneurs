@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Users, BookOpen, Briefcase, Info, MessageCircle, User } from 'lucide-react';
+import { Menu, X, Users, BookOpen, Briefcase, Info, MessageCircle, User, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
@@ -12,6 +11,7 @@ const Navigation = () => {
     { name: 'Accueil', href: '/', icon: null },
     { name: 'Opportunités', href: '/opportunites', icon: Briefcase },
     { name: 'Formations', href: '/formations', icon: BookOpen },
+    { name: 'Galerie', href: '/galerie', icon: Camera },
     { name: 'Utilisateurs', href: '/utilisateurs', icon: Users },
     { name: 'À propos', href: '/a-propos', icon: Info },
     { name: 'Contact', href: '/contact', icon: MessageCircle },
