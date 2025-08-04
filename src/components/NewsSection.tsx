@@ -2,6 +2,7 @@
 import { Clock, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const NewsSection = () => {
   const news = [
@@ -72,20 +73,24 @@ const NewsSection = () => {
                 <CardDescription className="text-gray-600 mb-4">
                   {article.description}
                 </CardDescription>
-                <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
-                  Lire la suite
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
+                <Link to="/contact">
+                  <Button variant="ghost" className="p-0 h-auto text-primary hover:text-primary/80">
+                    Lire la suite
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-            Voir toutes les actualités
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+              Voir toutes les actualités
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

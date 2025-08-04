@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { Link } from 'react-router-dom';
 
 const Opportunites = () => {
   const opportunities = [
@@ -140,12 +141,16 @@ const Opportunites = () => {
                   </div>
 
                   <div className="flex gap-3">
-                    <Button className="bg-primary hover:bg-primary/90">
-                      Postuler maintenant
-                    </Button>
-                    <Button variant="outline">
-                      Voir les détails
-                    </Button>
+                    <Link to="/inscription">
+                      <Button className="bg-primary hover:bg-primary/90">
+                        Postuler maintenant
+                      </Button>
+                    </Link>
+                    <Link to="/contact">
+                      <Button variant="outline">
+                        Voir les détails
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -153,9 +158,11 @@ const Opportunites = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-              Charger plus d'opportunités
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                Charger plus d'opportunités
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
