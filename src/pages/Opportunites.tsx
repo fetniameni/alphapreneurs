@@ -146,7 +146,7 @@ const Opportunites = () => {
                         Postuler maintenant
                       </Button>
                     </Link>
-                    <Link to="/contact">
+                    <Link to={`/opportunites/${opportunity.id}`}>
                       <Button variant="outline">
                         Voir les détails
                       </Button>

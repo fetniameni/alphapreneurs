@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 
 const Formations = () => {
   const formations = [
@@ -175,13 +176,17 @@ const Formations = () => {
                   </div>
 
                   <div className="flex gap-3">
-                    <Button className="flex-1 bg-primary hover:bg-primary/90">
-                      <BookOpen className="w-4 h-4 mr-2" />
-                      S'inscrire
-                    </Button>
-                    <Button variant="outline">
-                      Détails
-                    </Button>
+                    <Link to="/inscription" className="flex-1">
+                      <Button className="w-full bg-primary hover:bg-primary/90">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        S'inscrire
+                      </Button>
+                    </Link>
+                    <Link to={`/formations/${formation.id}`}>
+                      <Button variant="outline">
+                        Détails
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -189,9 +194,11 @@ const Formations = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-              Voir toutes les formations
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                Voir toutes les formations
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -206,9 +213,11 @@ const Formations = () => {
           <p className="text-xl mb-8 opacity-90">
             Obtenez des certifications reconnues et rejoignez notre communauté d'entrepreneurs à succès
           </p>
-          <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
-            Découvrir nos certifications
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
+              Découvrir nos certifications
+            </Button>
+          </Link>
         </div>
       </section>
 

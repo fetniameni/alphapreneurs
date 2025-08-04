@@ -7,7 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Opportunites from "./pages/Opportunites";
+import OpportuniteDetails from "./pages/OpportuniteDetails";
 import Formations from "./pages/Formations";
+import FormationDetails from "./pages/FormationDetails";
 import Galerie from "./pages/Galerie";
 import Utilisateurs from "./pages/Utilisateurs";
 import APropos from "./pages/APropos";
@@ -28,7 +30,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/opportunites" element={<Opportunites />} />
+            <Route path="/opportunites/:id" element={<OpportuniteDetails />} />
             <Route path="/formations" element={<Formations />} />
+            <Route path="/formations/:id" element={<FormationDetails />} />
             <Route path="/galerie" element={<Galerie />} />
             <Route path="/utilisateurs" element={<Utilisateurs />} />
             <Route path="/a-propos" element={<APropos />} />
