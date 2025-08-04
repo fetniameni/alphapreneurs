@@ -1,6 +1,7 @@
 
 import { ArrowRight, Rocket, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -29,13 +30,17 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4">
-              Commencer maintenant
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4">
-              Découvrir la plateforme
-            </Button>
+            <Link to="/inscription">
+              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4">
+                Commencer maintenant
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Link to="/a-propos">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4">
+                Découvrir la plateforme
+              </Button>
+            </Link>
           </div>
         </div>
 
